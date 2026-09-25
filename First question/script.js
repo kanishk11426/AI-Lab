@@ -1,3 +1,5 @@
+// calculates the electricity bill 
+
 function bill() {
 
     const units = document.getElementById("units").value;
