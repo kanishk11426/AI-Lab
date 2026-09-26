@@ -27,3 +27,5 @@ function bill() {
         <h3>The total cost is : ${total}</h3>
     `;
 }
+
+// check credentials //
