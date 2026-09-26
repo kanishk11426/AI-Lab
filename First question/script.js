@@ -5,20 +5,25 @@ function bill() {
     const units = document.getElementById("units").value;
     const rate = document.getElementById("rate").value;
     const checkbox = document.getElementById("discount");
-    const puke = document.getElementById("output");
-
-    console.log(units, rate);
-    console.log(checkbox);
-    const total = units * rate;
+    const outputbox = document.getElementById("output");
+    let total = 0;
+    if (checkbox.checked){
+        total = units * rate * 0.9;
+    }
+    else {
+        total = units * rate
+    }
     
-    puke.innerHTML =`
+    outputbox.innerHTML =`
         <h3>The no. of units are : ${units}</h3>
         <h3>The rate is : ${rate}</h3>
-        <h3>The no. of units are : ${total}</h3>
-    `
-    if (checkbox.checked) {
-        puke.innerHTML = `
-            <h3>The discount is applied.</h3>
-        `
-    }
-};
+
+        ${( () => { 
+            if (checkbox.checked) {
+                return `Discount Applied`;
+            }
+            return ``
+        }) ()}
+        <h3>The total cost is : ${total}</h3>
+    `;
+}
