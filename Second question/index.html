@@ -2,25 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library Fine Calculator</title>
 </head>
 <body>
-    <input type="text" name="" id="">
-    <br>
-    <input type="text" name="" id="">
-    <br>
-    <input type="text" name="" id="">
-    <br>
-    <input type="text" name="" id="">
-    <br>
-    <input type="text" name="" id="">
-    <br>
-    <input type="text" name="" id="">
-    <br>
-    <input type="text" name="" id="">
-    <br>
-    <hr>
-    <button type="button">FIND</button>
+
+    <h1>Library Fine Calculator</h1>
+
+    <!-- Input section -->
+    <label for="daysInput">Enter number of overdue days:</label>
+    <input type="number" id="daysInput" placeholder="e.g. 5">
+    <button id="calculateBtn">Calculate Fine</button>
+
+    <!-- Output section -->
+    <h2>Results:</h2>
+    <p id="validationMessage"></p>
+    <p id="fineCategory"></p>
+    <p id="countdownMessage"></p>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
